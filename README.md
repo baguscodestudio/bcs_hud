@@ -1,5 +1,7 @@
 # HUD
 
+### [Documentation](https://docs.baguscodestudio.com/docs/hud/)
+
 A Fivem HUD library that includes 4 features.
 
 - Notification / Alert
