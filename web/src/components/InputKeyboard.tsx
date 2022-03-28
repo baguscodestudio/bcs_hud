@@ -62,7 +62,7 @@ const InputKeyboard = () => {
           {rows.map((row, index) => (
             <div className="flex flex-col w-full my-2">
               <div className="font-semibold mb-1">{row.title}</div>
-              <div className="flex items-center pr-">
+              <div className="flex items-center">
                 {row.icon && (
                   <i className={row.icon + " pl-1 pr-2"}></i>
                 )}
