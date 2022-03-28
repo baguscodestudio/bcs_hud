@@ -5,20 +5,21 @@ import { KeyboardData, KeyboardRow } from '../types';
 import { debugData } from '../utils/debugData';
 import { fetchNui } from '../utils/fetchNui';
 
-debugData([
-  {
-    action: 'openInputKeyboard',
-    data: {
-      title: 'Titlenya nih',
-      rows: [
-        {
-          title: 'what',
-          placeholder: 'isinya begini',
-        },
-      ],
-    },
-  },
-]);
+// debugData([
+//   {
+//     action: 'openInputKeyboard',
+//     data: {
+//       title: 'Titlenya nih',
+//       rows: [
+//         {
+//           title: 'what',
+//           placeholder: 'isinya begini',
+//           icon: 'fa-brands fa-cc-mastercard'
+//         },
+//       ],
+//     },
+//   },
+// ]);
 
 const InputKeyboard = () => {
   const [isOpen, setOpen] = useState(false);
@@ -61,14 +62,19 @@ const InputKeyboard = () => {
           {rows.map((row, index) => (
             <div className="flex flex-col w-full my-2">
               <div className="font-semibold mb-1">{row.title}</div>
-              <input
-                className="w-full rounded-md bg-slate-600 px-2 py-1 focus:ring-2 focus:ring-blue-800 outline-none"
-                name={`index-${index}`}
-                required={row.required || false}
-                type={row.type || 'text'}
-                placeholder={row.placeholder}
-                onChange={(evt) => handleChange(evt.currentTarget.value, index)}
-              />
+              <div className="flex items-center">
+                {row.icon && (
+                  <i className={row.icon + " pl-1 pr-2"}></i>
+                )}
+                <input
+                  className="w-full rounded-md bg-slate-600 px-2 py-1 focus:ring-2 focus:ring-blue-800 outline-none"
+                  name={`index-${index}`}
+                  required={row.required || false}
+                  type={row.type || 'text'}
+                  placeholder={row.placeholder}
+                  onChange={(evt) => handleChange(evt.currentTarget.value, index)}
+                />
+              </div>
             </div>
           ))}
           <button

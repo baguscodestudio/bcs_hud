@@ -25,6 +25,7 @@ export type AlertType = {
 
 export interface KeyboardRow {
   title: string;
+  icon?: string;
   type?: string;
   required?: boolean;
   placeholder?: string;
