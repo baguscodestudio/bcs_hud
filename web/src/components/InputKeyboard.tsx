@@ -5,21 +5,21 @@ import { KeyboardData, KeyboardRow } from '../types';
 import { debugData } from '../utils/debugData';
 import { fetchNui } from '../utils/fetchNui';
 
-debugData([
-  {
-    action: 'openInputKeyboard',
-    data: {
-      title: 'Titlenya nih',
-      rows: [
-        {
-          title: 'what',
-          placeholder: 'isinya begini',
-          icon: 'fa-brands fa-cc-mastercard'
-        },
-      ],
-    },
-  },
-]);
+// debugData([
+//   {
+//     action: 'openInputKeyboard',
+//     data: {
+//       title: 'Titlenya nih',
+//       rows: [
+//         {
+//           title: 'what',
+//           placeholder: 'isinya begini',
+//           icon: 'fa-brands fa-cc-mastercard'
+//         },
+//       ],
+//     },
+//   },
+// ]);
 
 const InputKeyboard = () => {
   const [isOpen, setOpen] = useState(false);
