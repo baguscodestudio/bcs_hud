@@ -97,7 +97,7 @@ export const Alert = () => {
           leaveTo={POSITIONS[data.position || 'top-right'].from}
         >
           <div
-            className={`w-96 h-full rounded-l-lg bg-white shadow-lg flex justify-between items-center ${
+            className={`w-96 h-full rounded-l-lg bg-white shadow-lg flex justify-between items-center whitespace-pre ${
               AlertTypes[data.type].text
             }`}
           >
