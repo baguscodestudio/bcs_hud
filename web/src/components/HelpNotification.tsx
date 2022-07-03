@@ -7,7 +7,7 @@ import { debugData } from '../utils/debugData';
 //   {
 //     action: 'displayHelp',
 //     data: {
-//       text: 'Press ~E~ to open boss menu haha lorem ipsum dolor sit amet hebron hebron',
+//       text: '~ENTER~ to confirm house<br>~BACKSPACE~ to cancel<br>~←~ ~→~ to Rotate<br>~↑~ ~↓~ to adjust height placement<br>~<~ ~>~ to Change shells',
 //       play: true,
 //       position: 'center-right',
 //     },
@@ -65,7 +65,7 @@ export const HelpNotification = () => {
       {show ? (
         <div
           className={classNames(
-            'absolute font-Chalet antialiased py-1 bg-black px-3 opacity-90 text-white max-w-sm',
+            'absolute font-Chalet antialiased py-1 bg-black px-3 opacity-90 text-white max-w-sm leading-loose',
             POSITION[position]
           )}
           dangerouslySetInnerHTML={{ __html: fixArray.join(' ') }}
