@@ -12,6 +12,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - uses: ncipollo/release-action@v1
+      - uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          token: ${{ secrets.TOKEN_GITHUB }}
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          prerelease: false
