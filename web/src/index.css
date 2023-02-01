@@ -10,6 +10,18 @@
     url('./fonts/ChaletLondonNineteenSixty.ttf') format('truetype');
 }
 
+@layer components {
+  .rotate-left {
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-100%);
+    margin-top: -50%;
+  }
+  .rotation-wrapper-inner {
+    padding: 50% 0;
+    height: 0;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,6 +29,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {

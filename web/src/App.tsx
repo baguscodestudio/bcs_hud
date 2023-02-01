@@ -8,6 +8,7 @@ import Modal from './components/Modal';
 import InputKeyboard from './components/InputKeyboard';
 import { fetchNui } from './utils/fetchNui';
 import { locale } from './store/locale';
+import Instruction from './components/Instruction';
 
 function App() {
   useEffect(() => {
@@ -17,13 +18,14 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="">
       <InputKeyboard />
       <Modal />
       <Settings />
+      <Instruction />
       <HelpNotification />
       <Alert />
-    </>
+    </div>
   );
 }
 

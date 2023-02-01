@@ -1,6 +1,7 @@
 local Settings = {
     HelpPosition = 'top-left',
     HelpAudio = true,
+    NotificationStyle = 'clean', -- clean or transparent
     NotificationPosition = 'top-right',
     NotificationAudio = true,
     Volume = 1
@@ -38,6 +39,7 @@ function SendAlert(title, message, type, duration, position)
             type=type,
             play=Settings.NotificationAudio,
             volume=Settings.Volume,
+            style=Settings.NotificationStyle,
             position=position or Settings.NotificationPosition,
             duration=duration
         }

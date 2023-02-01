@@ -9,8 +9,8 @@ import { locale } from '../store/locale';
 //   {
 //     action: 'openModal',
 //     data: {
-//       title: 'what',
-//       text: 'Are you sure?',
+//       title: 'Confirmation Title',
+//       text: 'Are you sure to confirm this? Lorem ipsum dolor sit amet this is the standard text since the 2000s.',
 //     },
 //   },
 // ]);
@@ -81,31 +81,28 @@ const Modal = () => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                <Dialog.Title
-                  as="h3"
-                  className="text-lg font-medium leading-6 text-gray-900"
-                >
+              <div className="relative inline-block w-fit max-w-md p-6 my-8 text-left align-middle transition-all transform bg-grey-dark text-white shadow-xl rounded-md">
+                <Dialog.Title as="h3" className="text-lg font-bold leading-6">
                   {data.title}
                 </Dialog.Title>
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">{data.text}</p>
+                  <p>{data.text}</p>
                 </div>
 
-                <div className="mt-4">
+                <div className="absolute flex flex-col-reverse -right-4 gap-2 -translate-y-1/2 top-1/2">
                   <button
                     type="button"
-                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500 mr-6"
+                    className="w-8 h-8 flex items-center justify-center text-xl font-medium bg-red-inactive rounded-md hover:bg-red-active outline-none"
                     onClick={() => closeModal()}
                   >
-                    {locale['decline']}
+                    <i className="fa-regular fa-circle-xmark"></i>
                   </button>
                   <button
                     type="button"
-                    className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+                    className="w-8 h-8 flex items-center justify-center text-xl font-medium bg-green-inactive rounded-md hover:bg-green-active outline-none"
                     onClick={acceptModal}
                   >
-                    {locale['accept']}
+                    <i className="fa-regular fa-circle-check"></i>
                   </button>
                 </div>
               </div>

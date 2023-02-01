@@ -4,6 +4,7 @@ export interface AlertData {
   type: keyof AlertType;
   play?: boolean;
   volume?: number;
+  style: 'clean' | 'transparent';
   position?: string;
   duration?: number;
   icon?: string;
@@ -23,8 +24,22 @@ export type AlertType = {
   info: AlertProp;
 };
 
+export type InstructionItem = {
+  description: string;
+  buttons: string[];
+};
+
+export interface InstructionData {
+  title: string;
+  play?: boolean;
+  volume?: number;
+  position?: string;
+  items: InstructionItem[];
+}
+
 export interface KeyboardRow {
   title: string;
+  options?: string[];
   icon?: string;
   type?: string;
   required?: boolean;
