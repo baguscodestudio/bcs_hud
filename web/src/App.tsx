@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import './App.css';
 
 import Settings from './components/Settings';
 import { HelpNotification } from './components/HelpNotification';

@@ -62,7 +62,7 @@ const AlertTypes: {
     info: {
       color: 'bg-blue-500',
       text: 'text-blue-700',
-      background: 'bg-slate-150',
+      background: 'from-blue-500 to-blue-500/15',
       icon: <Info />,
     },
   },
@@ -101,7 +101,7 @@ const POSITIONS: { [key: string]: { from: string; to: string } } = {
 //     data: {
 //       title: 'Test',
 //       message: "Lorem Ipsum has been the industry's standard ",
-//       type: 'error',
+//       type: 'info',
 //       style: 'transparent',
 //       duration: 300000,
 //       play: true,
@@ -129,7 +129,7 @@ export const Alert = () => {
               leaveTo={POSITIONS[data.position || 'top-right'].from}
             >
               <div
-                className={`w-96 border-[1px] border-white/60 px-2 h-full rounded-md shadow-lg flex justify-around backdrop-blur-2xl items-center text-white bg-gradient-to-br ${
+                className={`w-96 border-[1px] border-white/60 px-2 h-full rounded-md shadow-lg flex justify-around items-center text-white bg-gradient-to-br ${
                   AlertTypes[data.style][data.type].background
                 }`}
               >
