@@ -87,9 +87,9 @@ const Instruction = () => {
                 <div className="flex items-start justify-end h-8 uppercase mr-2">
                   {item.description}
                 </div>
-                <div className="flex gap-1 h-8">
+                <div className="flex gap-1 h-8 justify-end">
                   {item.buttons.map((button) => (
-                    <span className="flex text-sm items-center justify-center shadow-sm bg-gray-100 rounded-md py-1 px-2.5 text-black text-bold max-w-min max-h-7">
+                    <span className="flex text-sm items-center justify-center shadow-sm bg-gray-100 rounded-md py-1 px-2.5 text-black text-bold max-w-min max-h-7 whitespace-nowrap">
                       {button}
                     </span>
                   ))}

@@ -172,6 +172,20 @@ exports('keyboard', function(title, rows)
     return results and true or false, UnpackInput(results)
 end)
 
+exports('keybind', function(data)
+    data.position = data.position or 'center-right'
+    SendNUIMessage({
+        action="keybind",
+        data= data
+    })
+end)
+
+exports('closeKeybind', function()
+    SendNUIMessage({
+        action='closeKeybind',
+    })
+end)
+
 RegisterCommand('testnotify', function()
     -- Default notification position is on top right
     exports['bcs_hud']:SendAlert('Title Here', 'Message of notification here!', 'success', 3000)
