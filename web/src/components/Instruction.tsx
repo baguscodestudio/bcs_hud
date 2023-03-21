@@ -4,25 +4,25 @@ import classNames from 'classnames';
 import { debugData } from '../utils/debugData';
 import { InstructionData, InstructionItem } from '../types';
 
-// debugData([
-//   {
-//     action: 'keybind',
-//     data: {
-//       title: 'Editing Furniture',
-//       position: 'center-right',
-//       items: [
-//         {
-//           description: 'CANCEL',
-//           buttons: ['BACKSPACE'],
-//         },
-//         {
-//           description: 'Change Speed',
-//           buttons: ['CAPSLOCK', 'LSHIFT'],
-//         },
-//       ],
-//     },
-//   },
-// ]);
+debugData([
+  {
+    action: 'keybind',
+    data: {
+      title: 'Editing Furniture Abc Lima Dasar Tiga empat Dor',
+      position: 'center-right',
+      items: [
+        {
+          description: 'CANCEL',
+          buttons: ['BACKSPACE'],
+        },
+        {
+          description: 'Change Speed',
+          buttons: ['CAPSLOCK', 'LSHIFT'],
+        },
+      ],
+    },
+  },
+]);
 
 const POSITION: { [key: string]: string } = {
   ['top-left']: 'top-2 left-3',
@@ -32,7 +32,7 @@ const POSITION: { [key: string]: string } = {
   ['top-center']: 'top-2 left-1/2 -translate-x-1/2',
   ['bottom-center']: 'bottom-2 left-1/2 -translate-x-1/2',
   ['center-left']: 'left-3 top-1/2 -translate-y-1/2',
-  ['center-right']: 'right-3 top-1/2 -translate-y-1/2',
+  ['center-right']: 'right-6 top-1/2 -translate-y-1/2',
 };
 
 const Instruction = () => {
@@ -105,7 +105,9 @@ const Instruction = () => {
                     &nbsp;
                   </div>
                 </div>
-                <div className="uppercase mt-1">{text}</div>
+                <div className="uppercase mt-1 max-w-[10rem] text-center">
+                  {text}
+                </div>
               </div>
             </div>
           </div>
