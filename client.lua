@@ -6,6 +6,12 @@ local Settings = {
     NotificationAudio = true,
     Volume = 1
 }
+local Notification_Types = {
+    ['info'] = true,
+    ['warning'] = true,
+    ['error'] = true,
+    ['success'] = true,
+}
 local Promise = nil
 local Locale = {
     ['accept'] = 'Accept',
@@ -31,6 +37,10 @@ end)
 -- Notification
 
 function SendAlert(title, message, type, duration, position)
+    type = type or 'info'
+    if not Notification_Types[type] then
+        type = 'info'
+    end
     SendNUIMessage({
         action='sendAlert',
         data={
